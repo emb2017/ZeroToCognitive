@@ -19,12 +19,10 @@
 
 function initPage ()
 {
-* Enable the microphone, disable the stop button:
-      var _mic = $('#microphone'); var _stop = $("#stop");
+  var _mic = $('#microphone'); var _stop = $("#stop");
     _mic.addClass("mic_enabled");
     _stop.addClass("mic_disabled");
 
-* Monitor the microphone button for a click:
   _mic.on("click", function ()
     {
       var _className = this.className;
@@ -44,15 +42,13 @@ function initPage ()
           });
         }
       });
-      
-* Monitor the Stop button for a click:
-  _stop.on("click",  function() {
-    console.log("Stopping text-to-speech service...");
-    if (stream != undefined) {stream.stop(); }
-    _mic.addClass("mic_enabled");
-    _mic.removeClass("mic_disabled");
-    _stop.addClass("mic_disabled");
-    _stop.removeClass("mic_enabled");
-});
 
+  _stop.on("click",  function() {
+          console.log("Stopping text-to-speech service...");
+          if (stream != undefined) {stream.stop(); }
+          _mic.addClass("mic_enabled");
+          _mic.removeClass("mic_disabled");
+          _stop.addClass("mic_disabled");
+          _stop.removeClass("mic_enabled");
+        });
 }

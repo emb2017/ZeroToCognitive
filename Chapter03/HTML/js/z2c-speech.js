@@ -14,7 +14,7 @@
  * limitations under the License.
  */
  /*
-** z2c-speech.js
+*** z2c-speech.js
 */
 
 function initPage ()
